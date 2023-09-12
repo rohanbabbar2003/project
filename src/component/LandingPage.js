@@ -15,7 +15,7 @@ export default function LandingPage() {
           {/* <span> ~ Connecting the legal world for a more accessible future.. </span> */}
           <br />
 
-          <Link to="/previewExplor"> <button className="btn btn-primary">Explore</button></Link>
+          <Link to="/Expo"> <button className="btn btn-primary " >Explore</button></Link>
         </div>
         <div className="img">
           <img src={photo1} alt="photo" style={{ width: "500px", margin: "70px 100px", backgroundColor:"white"}} />

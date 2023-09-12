@@ -2,6 +2,7 @@
 import Logo from '../img/Logo.png'
 import React from 'react';
 import LoginPage from './LoginPage';
+import SignUp from './SignUp';
 import { Link } from "react-router-dom";
 // import './Navbar.css';
 
@@ -12,7 +13,7 @@ export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" style={{ width: "58px",marginBottoma:"0px"}}/></Link>
+                <Link className="navbar-brand" to="/"><img src={Logo} alt="Logo" style={{ width: "58px",marginBottom:"0px"}}/></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -23,14 +24,13 @@ export default function Navbar() {
                         </li>
 
                         <li className="nav-item">
-                        <Link className="nav-link active" to="/previewExplor">Explore</Link>
+                        <Link className="nav-link active" to="/expo">Explore</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="nav-link active" to="/">About</Link>
+                        <Link className="nav-link active" to="/about">About</Link>
                         </li>
                         <li className="nav-item">
-                        {/* <Link className="nav-link active" to="/Shop"><MdSell />Store</Link> */}
-                            <a className="nav-link" href="#">Support</a>
+                        <Link className="nav-link active" to="/support">Support</Link>
                         </li>
 
                     </ul>
@@ -44,6 +44,17 @@ export default function Navbar() {
                                 <div className="modal-content">
                                     <button type="button" className="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close" style={{padding:"30px 40px 0 0 ", height:"", fontSize:"30px"}}></button>
                                     <LoginPage/>
+                                </div>
+                            </div>
+                        </div> 
+                        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SignUp">
+                        Sign up
+                       </button>
+                        <div className="modal  login fade" id="SignUp" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div className="modal-dialog modal-dialog-centered" style={{minWidth:"500px"}}>
+                                <div className="modal-content">
+                                    <button type="button" className="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close" style={{padding:"30px 40px 0 0 ", height:"", fontSize:"30px"}}></button>
+                                    <SignUp/>
                                 </div>
                             </div>
                         </div> 

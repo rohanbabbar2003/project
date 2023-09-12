@@ -4,7 +4,12 @@
   background-color: #000000	;
   color: #fff;
 }
+.container-fluid{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+}
 .navbar-brand {
   padding-left: 3rem;
   color: #ffffff;
@@ -83,11 +88,11 @@
 }
 
 .loginbtn{
-  margin-right: 30px;
+  margin-right: 0px;
 }
 .loginbtn  .btn{
   background-color: #ff8400;
-  width: 120px;
+  width: 80px;
   border: none; 
   font-size: 1.2rem;
   padding: 0 0 3px 0;
@@ -105,6 +110,7 @@
   height: 600px;
   width: 100%;
   background-color: #f2f2f2		;
+  
   color: #003b76;
   display: flex;
 }
@@ -168,9 +174,9 @@
 
 /* explore */
 .explore {
-  background-image: linear-gradient(rgba(253, 241, 203, 0.451), rgba(3, 78, 154, 0.396));
+  
   color: #022446;
-  height: 30rem;
+  height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -417,7 +423,7 @@ button:hover {
 }
 
 .explorePagebtn{
-  background-image: linear-gradient(rgba(253, 241, 203, 0.451), rgba(3, 78, 154, 0.396));
+  background-image: linear-gradient(rgba(255, 254, 249, 0.801), rgba(201, 222, 244, 0.779));
   color: #022446;
   height: 25rem;
   display: flex;
@@ -527,27 +533,349 @@ a {
   color: #0077cc;
 }
 /* Footer.css */
+/* Footer.css */
 .footer {
-  background-color: #000000;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
+  background-color: #333; /* Change the background color as needed */
+  color: #fff; /* Text color */
+  padding: 20px 0;
 }
-.footer .container{
+
+.container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
 }
-.footer .container ul li{
+
+ul {
   list-style: none;
-  font-weight: 300;
-  font-size: 20px;
+  padding: 0;
 }
-.rights{
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.rights {
+  text-align: center;
+  padding-top: 20px;
   font-size: 14px;
-  font-weight: 100;
-  margin: 20px;
+  opacity: 0.7;
+}
+
+.rights a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.rights a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* About.css */
+/* About.css */
+.about-container {
+  background-color: #f7f7f7; /* Background color for the container */
+  padding: 40px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #333; /* Text color for the title */
+}
+
+.about-text {
+  font-size: 18px;
+  color: #555; /* Text color for the content */
+}
+
+/* Style links within the text */
+.about-text a {
+  color: #007BFF; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-text a:hover {
+  color: #0056b3; /* Link color on hover */
+}
+
+/* Add a box shadow to the container for depth */
+.about-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Center-align text on smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+    text-align: center;
+  }
+}
+
+
+/* Add more custom styles as needed */
+
+/* components/Support.css */
+/* Support.css */
+.support-container {
+  background-color: #f7f7f7;
+  padding: 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.support-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease; /* Transition text color */
+}
+
+.support-container p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  transition: color 0.3s ease; /* Transition text color */
+}
+
+.support-options h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease; /* Transition text color */
+}
+
+.support-options ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.support-options ul li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  transition: color 0.3s ease; /* Transition text color */
+}
+
+.support-options ul li strong {
+  font-weight: bold;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease; /* Transition text color */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  transition: color 0.3s ease; /* Transition label text color */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease; /* Transition border color */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border-color: #007BFF;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition background color, transform, and box-shadow */
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Center-align elements on smaller screens */
+@media (max-width: 768px) {
+  .support-container {
+    text-align: center;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+  }
+}
+
+
+
+
+/* components/Explore.css */
+/* components/Explore.css */
+.explore-container {
+  text-align: center;
+  padding: 20px;
+  height: 70vh;
+}
+
+.feature-options {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.399);
+}
+
+.feature-card h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+.btn-explore {
+  background-color: #007BFF;
+  color: #fff;
+  
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+  background-color: #0056b3;
+}
+
+/* TextSummarizer.css */
+
+/* Container styles */
+.text-summarizer-container {
+  width: 100%;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Text input styles */
+.text-input {
+  height: 50vh;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Summarize button styles */
+.summarize-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.summarize-button:hover {
+  background-color: #0056b3;
+}
+
+/* Summary display styles */
+.summary-container {
+  margin-top: 20px;
+}
+
+.summary-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.summary-text {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  min-height: 100px;
+  overflow-y: auto;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .text-summarizer-container {
+    padding: 10px;
+  }
+  .text-input {
+    font-size: 14px;
+  }
+  .summarize-button {
+    font-size: 14px;
+  }
+  .summary-heading {
+    font-size: 16px;
+  }
+  .summary-text {
+    font-size: 14px;
+  }
 }
