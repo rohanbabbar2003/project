@@ -10,6 +10,8 @@ import SignUp from './component/SignUp';
 import About from './component/About';
 import Support from './component/Support';
 import Expo from './component/Expo';
+import Card from './component/Card';
+import Calendar from './component/CourtCalendar';
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,8 +30,10 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/support" element={<Support />}></Route>
           {/* <Route exact path="/about" element={}></Route> */}
+          {/* <Route exact path="/courtcalender" element={<Calendar />}></Route> */}
           <Route exact path="/TextSummarizer" element={<TextSummarizer />}></Route>
           <Route exact path="/LoginPage" element={<LoginPage />}></Route>
+          <Route exact path="/Card" element={<Card />}></Route>
           <Route exact path="/LoginPage/SignUp" element={<SignUp />}></Route>
         </Routes>
       </Router>

@@ -15,11 +15,14 @@
   color: #ffffff;
   font-size: larger;
   font-weight: 900;
+  font-size: 23px;
+ 
+
 }
 
 .navbar-brand:hover {
   color: #ff8400;
-  font-size: larger;
+ 
 }
 
 
@@ -824,58 +827,52 @@ ul li {
   font-size: 16px;
 }
 
-/* Summarize button styles */
-.summarize-button {
+/* Add this CSS to your stylesheets */
+
+/* Container styles */
+.article-summarizer-container {
+  max-width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Heading styles */
+
+
+/* Input styles */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button styles */
+button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 10px 20px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
 }
 
-.summarize-button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
-/* Summary display styles */
-.summary-container {
-  margin-top: 20px;
-}
+/* Summary styles */
 
-.summary-heading {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.summary-text {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+p {
   font-size: 16px;
-  min-height: 100px;
-  overflow-y: auto;
-}
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  .text-summarizer-container {
-    padding: 10px;
-  }
-  .text-input {
-    font-size: 14px;
-  }
-  .summarize-button {
-    font-size: 14px;
-  }
-  .summary-heading {
-    font-size: 16px;
-  }
-  .summary-text {
-    font-size: 14px;
-  }
+  line-height: 1.5;
+  color: #555;
 }

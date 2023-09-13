@@ -1,58 +1,66 @@
-import React, { useState } from 'react';
-import openai from 'openai';
-import Navbar from './Navbar'
- // Import the CSS file
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Navbar from './Navbar';
 
-// Replace 'YOUR_API_KEY' with your actual OpenAI API key
-const api_key = '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';
-
-const TextSummarizer = () => {
-  const [textToSummarize, setTextToSummarize] = useState('');
+const ArticleSummarizer = () => {
+  const [apiKey, setApiKey] = useState(
+    'b19773562amshf24d02fc6afafc0p11cbf8jsn7d6f24acc2f4'
+  );
+  const [articleUrl, setArticleUrl] = useState('');
   const [summary, setSummary] = useState('');
 
-  const summarizeText = async () => {
-    console.log('Summarize button clicked');
-    try {
-      const response = await openai.Completion.create({
-        engine: 'davinci',
-        prompt: `Summarize the following text:\n${textToSummarize}`,
-        max_tokens: 200, // Adjust the max_tokens parameter for desired length
-        api_key: api_key,
+  const handleSummarize = () => {
+    // Make a request to the API here using Axios
+    axios({
+      method: 'GET',
+      url: 'https://article-extractor-and-summarizer.p.rapidapi.com/summarize',
+      params: {
+        url:  articleUrl,
+        length: '3',
+      },
+      headers: {
+        'content-type': 'application/json',
+        'X-RapidAPI-Key': apiKey,
+        'X-RapidAPI-Host': 'article-extractor-and-summarizer.p.rapidapi.com',
+      },
+      data: {
+        url: articleUrl,
+      },
+    })
+      .then((response) => {
+        console.log('hi');
+        setSummary(response.data.summary);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
       });
-
-      setSummary(response.choices[0].text.strip());
-    } catch (error) {
-      console.error('Error summarizing text:', error);
-    }
   };
 
   return (
     <>
-     <Navbar/>
-    <div className="text-summarizer-container"> 
-      <h2>Text Summarization</h2>
-      <textarea
-        rows="6"
-        cols="50"
-        placeholder="Enter text to summarize"
-        className="text-input" 
-        value={textToSummarize}
-        onChange={(e) => setTextToSummarize(e.target.value)}
-      ></textarea>
-      <button onClick={summarizeText} className="summarize-button">
-        Summarize
-      </button>
-      {summary && (
-        <div className="summary-container"> {/* Apply the summary container class */}
-          <h3 className="summary-heading">Summary:</h3> {/* Apply the heading class */}
-          <p className="summary-text">{summary}</p> {/* Apply the text class */}
+      <Navbar />
+      <div className="article-summarizer-container">
+        <h2>Article Summarizer</h2>
+        <input
+          type="text"
+          className="article-url-input"
+          placeholder="Enter Article URL"
+          value={articleUrl}
+          onChange={(e) => setArticleUrl(e.target.value)}
+        />
+        <button
+          onClick={handleSummarize}
+          className="summarize-button"
+        >
+          Summarize
+        </button>
+        <div>
+          <h3 className="summary-heading">Summary</h3>
+          <p className="summary-text">{summary}</p>
         </div>
-      )}
-    </div>
-    
+      </div>
     </>
-    
   );
 };
 
-export default TextSummarizer;
+export default ArticleSummarizer;

@@ -22,7 +22,13 @@ const Expo = () => {
           <button className="btn-explore">Learn More</button>
         </div>
         <div className="feature-card">
-          <h2>Client Portals</h2>
+          <h2>Court Calendar</h2>
+          <p>Securely communicate and share documents with clients.</p>
+          
+          <Link to="/CourtCalender"><button className="btn-explore">Learn More</button></Link>
+        </div>
+        <div className="feature-card">
+          <h2>Video Conferencing</h2>
           <p>Securely communicate and share documents with clients.</p>
           <button className="btn-explore">Learn More</button>
         </div>
@@ -32,12 +38,7 @@ const Expo = () => {
           <button className="btn-explore">Learn More</button>
         </div>
         <div className="feature-card">
-          <h2>Client Portals</h2>
-          <p>Securely communicate and share documents with clients.</p>
-          <button className="btn-explore">Learn More</button>
-        </div>
-        <div className="feature-card">
-          <h2>Client Portals</h2>
+          <h2>User Support</h2>
           <p>Securely communicate and share documents with clients.</p>
           <button className="btn-explore">Learn More</button>
         </div>

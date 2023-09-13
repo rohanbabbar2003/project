@@ -12,7 +12,7 @@ export default function LandingPage() {
         <div className="heading">
           <h1>Your Gateway to </h1>
           <h1><span>Legal</span> Excellence</h1>
-          {/* <span> ~ Connecting the legal world for a more accessible future.. </span> */}
+          <h4 style={{ color:"black"}}> - Connecting the legal world for a more accessible future.. </h4>
           <br />
 
           <Link to="/Expo"> <button className="btn btn-primary " >Explore</button></Link>
